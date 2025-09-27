@@ -150,7 +150,7 @@ export default function Dashboard() {
                       <p className="text-sm text-gray-500">{new Date(order.order_date).toLocaleDateString()}</p>
                     </div>
                     <div className="text-right">
-                      <p className="font-semibold text-gray-900">${order.amount?.toFixed(2) || '0.00'}</p>
+                      <p className="font-semibold text-gray-900">${order.amount || '0.00'}</p>
                       <span className="inline-flex px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">
                         Completed
                       </span>

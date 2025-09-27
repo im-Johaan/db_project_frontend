@@ -120,7 +120,7 @@ export default function Analytics() {
         <MetricCard
           icon={BarChart3}
           title="Average Order Value"
-          value={`$${getAverageOrderValue().toFixed(2)}`}
+          value={`$${getAverageOrderValue()}`}
           subtitle="+5% from last month"
           color="bg-purple-600"
         />
@@ -152,8 +152,8 @@ export default function Analytics() {
                     </div>
                   </div>
                   <div className="text-right">
-                    <p className="font-semibold text-gray-900">${item.total_revenue?.toFixed(2) || '0.00'}</p>
-                    <p className="text-sm text-gray-600">Avg: ${item.avg_order_value?.toFixed(2) || '0.00'}</p>
+                    <p className="font-semibold text-gray-900">${item.total_revenue || '0.00'}</p>
+                    <p className="text-sm text-gray-600">Avg: ${item.avg_order_value || '0.00'}</p>
                   </div>
                 </div>
               ))}
@@ -180,7 +180,7 @@ export default function Analytics() {
                     </div>
                   </div>
                   <div className="text-right">
-                    <p className="font-semibold text-gray-900">${product.total_revenue?.toFixed(2) || '0.00'}</p>
+                    <p className="font-semibold text-gray-900">${product.total_revenue || '0.00'}</p>
                     <p className="text-sm text-gray-600">${product.price || '0.00'} each</p>
                   </div>
                 </div>

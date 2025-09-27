@@ -204,7 +204,7 @@ export default function Orders() {
                     <div className="flex items-center">
                       <DollarSign className="w-4 h-4 text-gray-400 mr-2" />
                       <span className="text-sm font-medium text-gray-900">
-                        ${order.amount?.toFixed(2) || '0.00'}
+                        ${order.amount || '0.00'}
                       </span>
                     </div>
                   </td>
@@ -337,7 +337,7 @@ export default function Orders() {
                 </div>
                 <div>
                   <p className="text-sm text-gray-600">Total Amount</p>
-                  <p className="font-medium">${selectedOrder.amount?.toFixed(2)}</p>
+                  <p className="font-medium">${selectedOrder.amount}</p>
                 </div>
                 <div>
                   <p className="text-sm text-gray-600">Status</p>
@@ -360,8 +360,8 @@ export default function Orders() {
                     </div>
                   </div>
                   <div className="text-right">
-                    <p className="font-medium">${(detail.unit_price * detail.quantity).toFixed(2)}</p>
-                    <p className="text-sm text-gray-600">${detail.unit_price.toFixed(2)} each</p>
+                    <p className="font-medium">${(detail.unit_price * detail.quantity)}</p>
+                    <p className="text-sm text-gray-600">${detail.unit_price} each</p>
                   </div>
                 </div>
               ))}
